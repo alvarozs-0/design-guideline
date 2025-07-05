@@ -11,6 +11,12 @@
   font-family: "Work Sans";
   src: url(../fonts/Work_Sans/WorkSans-Regular.ttf) format("truetype");
 }
+@font-face {
+  font-family: "Gill Sans";
+  src: url(../fonts/gill-sans-2/Gill\ Sans.otf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* Body styles */
 body {
@@ -177,6 +183,10 @@ body > h1 {
   font-family: "Work Sans";
 }
 
+.gill-sans {
+  font-family: "Gill Sans";
+}
+
 /* Color blocks - existing color definitions remain the same */
 #abbey {
   background-color: #46464a;
@@ -263,6 +273,58 @@ body > h1 {
 
 .subheading h2 {
   text-align: left;
+}
+
+/* Navigation Bar */
+.main-nav {
+  width: 100%;
+  background-color: #193549;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(25, 53, 73, 0.08);
+  padding: 0.5rem 0;
+}
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main-nav li {
+  display: inline;
+}
+.main-nav a {
+  color: #ffc600;
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background 0.2s, color 0.2s;
+}
+.main-nav a:hover,
+.main-nav a:focus {
+  background-color: #234e6d;
+  color: #fff;
+}
+
+/* Responsive nav */
+@media (max-width: 600px) {
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .main-nav {
+    padding: 0.25rem 0;
+    margin-bottom: 1rem;
+  }
+  .main-nav a {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
 }
 
 /* Responsive styles */
